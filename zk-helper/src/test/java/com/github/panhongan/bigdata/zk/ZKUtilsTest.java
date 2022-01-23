@@ -52,6 +52,22 @@ public class ZKUtilsTest {
     }
 
     @Test
+    public void testCreatePersistNodeWithoutNamespace() {
+        CuratorFramework client = null;
+
+        try {
+            client = ZKUtils.createCuratorFramework(ZK_LIST, null);
+            assert (client != null);
+
+            ZKUtils.createPersistNode(client, "/test1/hello", "hello".getBytes(StandardCharsets.UTF_8));
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            ZKUtils.closeCuratorFramework(client);
+        }
+    }
+
+    @Test
     public void testCreatePersistSequentialNode() {
         CuratorFramework client = null;
 
