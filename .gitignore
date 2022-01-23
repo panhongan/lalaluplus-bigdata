@@ -1,0 +1,10 @@
+# Default ignored files
+*.iml
+.idea/
+target/
+
+spark-helper/*.iml
+spark-helper/target/
+
+zk-helper/*.iml
+zk-helper/target/
