@@ -8,3 +8,6 @@ spark-helper/target/
 
 zk-helper/*.iml
 zk-helper/target/
+
+kafka-helper/*.iml
+kafka-helper/target/
