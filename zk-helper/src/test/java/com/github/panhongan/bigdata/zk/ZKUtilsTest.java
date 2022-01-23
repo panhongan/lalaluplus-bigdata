@@ -119,6 +119,23 @@ public class ZKUtilsTest {
     }
 
     @Test
+    public void testCheckExists() {
+        CuratorFramework client = null;
+
+        try {
+            client = ZKUtils.createCuratorFramework(ZK_LIST, NAME_SPACE);
+            assert (client != null);
+
+            assert (ZKUtils.checkExists(client, "/hello"));
+            assert (!ZKUtils.checkExists(client, "/hello2"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            ZKUtils.closeCuratorFramework(client);
+        }
+    }
+
+    @Test
     public void testGetChildren() {
         CuratorFramework client = null;
 

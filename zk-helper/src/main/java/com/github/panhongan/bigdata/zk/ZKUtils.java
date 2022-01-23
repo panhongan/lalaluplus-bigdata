@@ -77,6 +77,10 @@ public class ZKUtils {
         return new String(client.getData().forPath(path));
     }
 
+    public static Boolean checkExists(final CuratorFramework client, final String path) throws Exception {
+        return client.checkExists().forPath(path) != null;
+    }
+
     public static List<String> getChildren(final CuratorFramework client, final String path) throws Exception {
         return client.getChildren().forPath(path);
     }
