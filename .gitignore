@@ -2,12 +2,11 @@
 *.iml
 .idea/
 target/
-
 spark-helper/*.iml
 spark-helper/target/
-
 zk-helper/*.iml
 zk-helper/target/
-
 kafka-helper/*.iml
 kafka-helper/target/
+hadoop-helper/*.iml
+hadoop-helper/target/
